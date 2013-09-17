@@ -47,6 +47,10 @@ And in your code...
   winston.add(winston.transports.Mysql, options);
 ```
 
+You can find a list of options that you can pass here :
+
+[https://github.com/felixge/node-mysql#connection-options][1]
+
 ## Unsupported
 This transport does not support (yet) :
 
@@ -55,3 +59,4 @@ This transport does not support (yet) :
 * **Saving of metadata**
 
 [0]: https://github.com/flatiron/winston
+[1]: https://github.com/felixge/node-mysql#connection-options
