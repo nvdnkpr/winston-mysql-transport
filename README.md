@@ -12,10 +12,10 @@ A Mysql transport for [winston][0].
 
 ## Usage
 
-**First you must generate your log table**
+First you must generate your log table
 
 ``` sql
-//file : extras/schema.sql
+/*file : extras/schema.sql*/
 CREATE TABLE IF NOT EXISTS `my_databse`.`log_table` (
 	`id` int(10) NOT NULL AUTO_INCREMENT,
 	`level` varchar(45) NOT NULL,
@@ -27,6 +27,8 @@ CREATE TABLE IF NOT EXISTS `my_databse`.`log_table` (
 );
 ```
 
+And in your code...
+
 ``` js
   var winston = require('winston');
   
@@ -36,7 +38,22 @@ CREATE TABLE IF NOT EXISTS `my_databse`.`log_table` (
   //
   require('winston-mysql-transport').Mysql;
   
+  options = {
+  	database : "my_database",
+  	table : "log_table",
+  	user : "root"
+  }
+  
   winston.add(winston.transports.Mysql, options);
 ```
+
+## Unsupported
+This transport does not support (yet) :
+
+* **streaming**
+
+* **querying**
+
+* **Saving of metadata**
 
 [0]: https://github.com/flatiron/winston
