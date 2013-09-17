@@ -1,0 +1,29 @@
+{
+  "name": "winston-mysql-transport",
+  "version": "0.1.0",
+  "description": "A Mysql Transport for winston (http://www.github.com/flatiron/winston)",
+  "main": "lib/winston-mysql-transport",
+  "scripts": {
+    "test": "vows test/*-test.js --spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sapher/winston-mysql-transport.git"
+  },
+  "keywords": [
+    "winston",
+    "transport",
+    "mysql",
+    "logging"
+  ],
+  "author": "sapher",
+  "license": "public domain",
+  "bugs": {
+    "url": "https://github.com/sapher/winston-mysql-transport/issues"
+  },
+  "devDependencies": {
+    "mysql": "~2.0.0-alpha9",
+    "vows": "~0.7.0",
+    "winston": "~0.7.2"
+  }
+}
