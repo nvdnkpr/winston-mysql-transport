@@ -16,7 +16,7 @@ First you must generate your log table
 
 ``` sql
 /*file : extras/schema.sql*/
-CREATE TABLE IF NOT EXISTS `my_databse`.`log_table` (
+CREATE TABLE IF NOT EXISTS `my_database`.`log_table` (
 	`id` int(10) NOT NULL AUTO_INCREMENT,
 	`level` varchar(45) NOT NULL,
 	`message` text NOT NULL,
@@ -51,9 +51,7 @@ And in your code...
 This transport does not support (yet) :
 
 * **streaming**
-
 * **querying**
-
 * **Saving of metadata**
 
 [0]: https://github.com/flatiron/winston
